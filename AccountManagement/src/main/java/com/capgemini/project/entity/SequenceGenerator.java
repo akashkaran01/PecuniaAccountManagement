@@ -8,7 +8,7 @@ import javax.websocket.ClientEndpoint;
 
 @Entity
 @Table(name="Generator")
-public class AccountNumberGenerator {
+public class SequenceGenerator {
 	
 	
 
@@ -24,6 +24,12 @@ public class AccountNumberGenerator {
 	
 	@Column(name = "Address_Id")
 	private int AddressId;
+	
+	@Column(name="Transaction_Id")
+	private long transId;
+	
+	@Column(name="Cheque_Id")
+	private long chequeId;
 
 	public int getId() {
 		return id;
@@ -55,6 +61,22 @@ public class AccountNumberGenerator {
 
 	public void setAddressId(int addressId) {
 		AddressId = addressId;
+	}
+
+	public long getTransId() {
+		return transId;
+	}
+
+	public void setTransId(long transId) {
+		this.transId = transId;
+	}
+
+	public long getChequeId() {
+		return chequeId;
+	}
+
+	public void setChequeId(long chequeId) {
+		this.chequeId = chequeId;
 	}
 	
 	

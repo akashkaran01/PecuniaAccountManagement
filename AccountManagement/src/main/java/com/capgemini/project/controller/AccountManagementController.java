@@ -20,7 +20,7 @@ import com.capgemini.project.entity.Address;
 import com.capgemini.project.entity.Customer;
 import com.capgemini.project.service.AccountManagementService;
 import com.capgemini.project.service.AccountManagementServiceImp;
-import com.capgemini.project.service.AccountNumberGeneratorService;
+import com.capgemini.project.service.SequenceGeneratorService;
 
 @RestController
 public class AccountManagementController {
@@ -29,7 +29,7 @@ public class AccountManagementController {
 	private AccountManagementService accountServivce;
 	
 	@Autowired
-	private AccountNumberGeneratorService numberGeneratorService;
+	private SequenceGeneratorService numberGeneratorService;
 	
 	@PostMapping("/addAccount")
 	public ResponseEntity<String> addAccount( @RequestBody Map<String ,Object> requestMap){
